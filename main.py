@@ -1,5 +1,16 @@
-# Pedir el nombre del jugador por teclado
-nombre_jugador = input("Por favor, ingresa tu nombre: ")
+import readchar
+from readchar import key
 
-# Mostrar un mensaje de bienvenida con el nombre del jugador
-print("¡Bienvenido, " + nombre_jugador + "! Este es el Proyecto Integrador parte 1.")
+def main():
+    print("Presiona la tecla ↑. Para salir del bucle")
+
+    while True:
+        char = readchar.readkey()
+        print(f"Tecla presionada: {char}")
+        if char == key.UP:
+            break
+
+    print("Bucle finalizado.")
+
+if __name__ == "__main__":
+    main()
